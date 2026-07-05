@@ -1,0 +1,2 @@
+import { Attempt } from './types';import { mocks } from './mocks';
+const mock=mocks[0]; export const sampleAttempt:Attempt={mockId:mock.id,studentName:'Amelia R.',answers:Object.fromEntries(mock.sections.flatMap(s=>s.questionIds).map((id,i)=>[id,i%4===0?'':i%3===0?'partial method': 'correct topic method'])),timeSpentSeconds:Object.fromEntries(mock.sections.flatMap(s=>s.questionIds).map((id,i)=>[id,70+i*12]))};
