@@ -1,0 +1,1 @@
+import { MockRoom } from '@/components/MockRoom';import { getMock } from '@/data/mocks';import { notFound } from 'next/navigation';export default async function Page({params}:{params:Promise<{id:string}>}){const {id}=await params;const mock=getMock(id); if(!mock)notFound(); return <MockRoom mock={mock}/>}

@@ -1,0 +1,1 @@
+'use client';import { useEffect,useState } from 'react';export function Timer({minutes}:{minutes:number}){const [s,setS]=useState(minutes*60);useEffect(()=>{const t=setInterval(()=>setS(x=>Math.max(0,x-1)),1000);return()=>clearInterval(t)},[]);return <div className="rounded-full bg-navy px-4 py-2 font-black text-white">{Math.floor(s/60)}:{String(s%60).padStart(2,'0')}</div>}

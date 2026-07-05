@@ -1,0 +1,1 @@
+import { AdminQuestionBank } from '@/components/AdminQuestionBank';export default function Page(){return <main className="section"><div className="mx-auto max-w-7xl"><h1 className="mb-8 text-5xl font-black">Admin question bank</h1><AdminQuestionBank/></div></main>}
