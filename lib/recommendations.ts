@@ -1,0 +1,3 @@
+import { Attempt } from '@/data/types';import { calculateMarksLostByTopic, calculateTopicBreakdown } from './mockScoring';
+export const recommendNextTopics=(a:Attempt)=>calculateMarksLostByTopic(a).slice(0,4).map(x=>x.topic);
+export function recommendSprint(a:Attempt){const weak=recommendNextTopics(a).join(', '); if(/Required|practical/i.test(weak))return 'Required Practicals Sprint'; if(/Algebra|Quadratics|Linear/.test(weak))return 'Algebra Sprint'; if(/Fractions|Ratio|Percentages/.test(weak))return 'Fractions, Ratio & Percentages Sprint'; const avg=calculateTopicBreakdown(a).reduce((s,t)=>s+t.percentage,0)/Math.max(1,calculateTopicBreakdown(a).length); return avg<50?'Grade 5 Maths Rescue Sprint':'Grade 7-9 Stretch Sprint';}

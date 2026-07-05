@@ -1,0 +1,1 @@
+import { ResourceCard } from '@/components/Cards';import { resources } from '@/data/resources';export default function Page(){return <main className="section"><div className="mx-auto max-w-7xl"><h1 className="text-5xl font-black">Free GCSE resources</h1><div className="mt-8 grid gap-6 md:grid-cols-4">{resources.map(r=><ResourceCard key={r.title} r={r}/>)}</div></div></main>}

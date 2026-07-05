@@ -1,0 +1,1 @@
+import { AdminMockBuilder } from '@/components/AdminMockBuilder';export default function Page(){return <main className="section"><div className="mx-auto max-w-7xl"><h1 className="mb-8 text-5xl font-black">Admin mock builder</h1><AdminMockBuilder/></div></main>}
